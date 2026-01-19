@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS | Future Footwear</title>
+    <meta name="description" content="Premium sporty footwear for the modern era.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">NEXUS</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#bestsellers">Best Sellers</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <div class="search-icon">
+                <i class="fa-solid fa-search"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </div>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for shoes...">
+            <button id="close-search"><i class="fa-solid fa-times"></i></button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>DEFY GRAVITY</h1>
+            <p>Elevate your performance with the next generation of athletic wear. Stylish, comfortable, unstoppable.
+            </p>
+            <div class="cta-group">
+                <a href="#bestsellers" class="btn btn-primary">Shop Now</a>
+                <a href="#collections" class="btn btn-outline">Explore Collections</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <!-- Will be populated with generated image -->
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop"
+                alt="Futuristic Shoe" class="hero-img">
+        </div>
+    </header>
+
+    <section id="collections" class="section">
+        <h2 class="section-title">CHOOSE YOUR PATH</h2>
+        <div class="grid-3">
+            <div class="collection-card">
+                <div class="overlay"></div>
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=600&auto=format&fit=crop"
+                    alt="Running Collection">
+                <h3>RUNNING</h3>
+            </div>
+            <div class="collection-card">
+                <div class="overlay"></div>
+                <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?q=80&w=600&auto=format&fit=crop"
+                    alt="Street Collection">
+                <h3>STREET</h3>
+            </div>
+            <div class="collection-card">
+                <div class="overlay"></div>
+                <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?q=80&w=600&auto=format&fit=crop"
+                    alt="Training Collection">
+                <h3>TRAINING</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="bestsellers" class="section">
+        <div class="section-header">
+            <h2 class="section-title">BEST SELLERS</h2>
+            <div class="filter-controls">
+                <select id="price-sort">
+                    <option value="default">Sort by Price</option>
+                    <option value="low-high">Price: Low to High</option>
+                    <option value="high-low">Price: High to Low</option>
+                </select>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="running">Running</option>
+                    <option value="street">Street</option>
+                    <option value="training">Training</option>
+                </select>
+            </div>
+        </div>
+        <div class="grid-4 product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?q=80&w=500&auto=format&fit=crop"
+                        alt="Nexus One">
+                    <span class="tag">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Nexus One</h3>
+                    <p class="price">Rs. 41,500</p>
+                    <div class="actions">
+                        <button class="btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?q=80&w=500&auto=format&fit=crop"
+                        alt="Velocity X">
+                </div>
+                <div class="product-info">
+                    <h3>Velocity X</h3>
+                    <p class="price">Rs. 35,900</p>
+                    <div class="actions">
+                        <button class="btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?q=80&w=500&auto=format&fit=crop"
+                        alt="Street King">
+                    <span class="tag">Hot</span>
+                </div>
+                <div class="product-info">
+                    <h3>Street King</h3>
+                    <p class="price">Rs. 33,000</p>
+                    <div class="actions">
+                        <button class="btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-img-box">
+                    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?q=80&w=500&auto=format&fit=crop"
+                        alt="Aero Glide">
+                </div>
+                <div class="product-info">
+                    <h3>Aero Glide</h3>
+                    <p class="price">Rs. 44,200</p>
+                    <div class="actions">
+                        <button class="btn-sm" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="section bg-darker">
+        <h2 class="section-title">ATHLETE REVIEWS</h2>
+        <div class="grid-3">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"The most comfortable shoes I've ever worn. The design is absolutely sick!"</p>
+                <div class="reviewer">- Alex J.</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Performance meets style. I wear these to the gym and to the club. seamless."</p>
+                <div class="reviewer">- Jordan T.</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Incredible build quality. Worth every penny. The red accents are fire."</p>
+                <div class="reviewer">- Casey M.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section split-section">
+        <div class="text-content">
+            <h2>OUR DNA</h2>
+            <p>At NEXUS, we believe in pushing boundaries. Our mission is to fuse cutting-edge technology with
+                street-ready aesthetics. We don't just make shoes; we engineer movement.</p>
+        </div>
+        <div class="image-content">
+            <!-- Reuse hero or another abstract image -->
+            <div class="brand-visual">NEXUS</div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>NEXUS</h3>
+                <p>The Future of Footwear.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>hello@nexusbrand.com</p>
+                <p>+1 (555) 123-4567</p>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="socials">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NEXUS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
